@@ -20,8 +20,17 @@ public class Aplicacao {
         System.out.println(Divide);
 
         Comparador comparador = new Comparador();
-        boolean MenorQue = comparador.menorQue(9,8);
+        boolean MenorQue = comparador.menorQue(2,4);
         System.out.println(MenorQue);
+
+        Aluno aluno1 = new Aluno("Bruno", 7);
+        System.out.println(aluno1);
+
+        Aluno aluno2 = new Aluno("Leandro", 8);
+        System.out.println(aluno2);
+
+        Aluno aluno3 = new Aluno("Pereira", 6);
+        System.out.println((aluno3));
 
     }
 
