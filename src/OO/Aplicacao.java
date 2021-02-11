@@ -19,6 +19,10 @@ public class Aplicacao {
         int Divide = calculadora.divide(2,4);
         System.out.println(Divide);
 
+        Comparador comparador = new Comparador();
+        boolean MenorQue = comparador.menorQue(9,8);
+        System.out.println(MenorQue);
+
     }
 
 }
