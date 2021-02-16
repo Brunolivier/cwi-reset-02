@@ -18,6 +18,12 @@ public class MinhaCasaMinhaDesgraca {
          *
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
+        opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Medicos", 805, "casa",
+                "Alipio de Melo"));
+
+
+
+
 
         /**
          * FIM
