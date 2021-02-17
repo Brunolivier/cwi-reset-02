@@ -5,15 +5,18 @@ Como comportamento, é necessário que o imóvel tenha um método apresentacao q
 informações do imóvel (ex.: "Imóvel localizado no endereço X. Valor: R$ Y").
  */
 
+import java.sql.SQLOutput;
+
 public class Imovel extends Endereco{
+    private String apresentacao;
     Endereco endereco;
     private double valor;
 
 
+
     public Imovel(String logadouro, double numero, String complemento, String bairro, String cidade,
-                  UnidadeFederativa estado, Endereco endereco, double valor) {
+                  UnidadeFederativa estado, double valor) {
         super(logadouro, numero, complemento, bairro, cidade, estado);
-        this.endereco = endereco;
         this.valor = valor;
     }
 
@@ -25,16 +28,21 @@ public class Imovel extends Endereco{
         return valor;
     }
 
+    public String getApresentacao() {
+        return apresentacao;
+    }
+
     public String apresentacao(){
-        System.out.println("Imóvel localizado no endereço: " + this.endereco);
-        System.out.println("Valor: " + this.valor);
+       apresentacao = "Imóvel localizado no endereço: " + getLogadouro() + " " + getNumero() + getComplemento() + getBairro()
+               + getCidade() + getEstado() + "no valor de: " + this.valor;
+
+        return apresentacao;
+
+
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
 
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
+//System.out.println("Imóvel localizado no endereço: " + this.endereco)
+// System.out.println("Valor: " + valor);
+
 }

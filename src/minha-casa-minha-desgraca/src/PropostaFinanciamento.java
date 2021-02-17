@@ -16,14 +16,12 @@ e xingar o beneficiário pois a proposta não foi aceita.
 Obs.: os dois métodos de impressão não podem ser chamados fora da classe.
  */
 
-public class PropostaFinanciamento extends Imovel{
-    private Beneficiario beneficiario;
-    private Imovel imovel;
+public class PropostaFinanciamento {
+    Beneficiario beneficiario;
+    Imovel imovel;
     private int mesesParaPagamento;
 
-
-    public PropostaFinanciamento(String nome, double salario, Beneficiario beneficiario, Imovel imovel, int mesesParaPagamento) {
-        super(nome, salario);
+    public PropostaFinanciamento(Beneficiario beneficiario, Imovel imovel, int mesesParaPagamento) {
         this.beneficiario = beneficiario;
         this.imovel = imovel;
         this.mesesParaPagamento = mesesParaPagamento;
@@ -40,16 +38,14 @@ public class PropostaFinanciamento extends Imovel{
      */
 
 
-
     public void validarProposta() {
-        if ((getSalario() * mesesParaPagamento) >= (imovel.getValor() / 2)
+        if ((beneficiario.getSalario() * mesesParaPagamento) >= (imovel.getValor() / 2))
         {
             System.out.println(imprimirPropostaAprovada());
         }
         else {
             System.out.println(imprimirPropostaNegada());
         }
-
 
     }
 
@@ -58,6 +54,7 @@ public class PropostaFinanciamento extends Imovel{
         System.out.println(imovel);
         System.out.println(mesesParaPagamento);
         System.out.println("Parábens, sua proposta foi aceita!");
+        return imprimirPropostaAprovada();
     }
 
     public String imprimirPropostaNegada(){
@@ -65,6 +62,30 @@ public class PropostaFinanciamento extends Imovel{
         System.out.println(imovel);
         System.out.println(mesesParaPagamento);
         System.out.println("Deu ruim, sua proposta foi negada!");
+        return imprimirPropostaNegada();
     }
 
+    public Beneficiario getBeneficiario() {
+        return beneficiario;
+    }
+
+    public void setBeneficiario(Beneficiario beneficiario) {
+        this.beneficiario = beneficiario;
+    }
+
+    public Imovel getImovel() {
+        return imovel;
+    }
+
+    public void setImovel(Imovel imovel) {
+        this.imovel = imovel;
+    }
+
+    public int getMesesParaPagamento() {
+        return mesesParaPagamento;
+    }
+
+    public void setMesesParaPagamento(int mesesParaPagamento) {
+        this.mesesParaPagamento = mesesParaPagamento;
+    }
 }

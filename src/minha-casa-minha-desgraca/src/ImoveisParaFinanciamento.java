@@ -10,13 +10,15 @@ Não é necessário criar nenhum método novo.
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImoveisParaFinanciamento extends Imovel {
+public class ImoveisParaFinanciamento {
 
     private List<Imovel> imoveis;
 
     public ImoveisParaFinanciamento() {
         imoveis = new ArrayList<>();
     }
+
+
 
     /**
      * Registra um imóvel como opção de financiamento. O imóvel só pode ser aceito se o valor dele for
@@ -28,16 +30,17 @@ public class ImoveisParaFinanciamento extends Imovel {
      */
     public void registrarImovel(Imovel imovel) {
 
+        System.out.println("imovel registrado");
         if ((imovel.getValor() < 50000) || (imovel.getValor() > 1000000)) {
-            System.out.println(" > Atenção, problema de registro! Imóveis com valor R$" + imovel.getValor() +
-                    " não são aceitos no programa.");
-        } else {
+         System.out.println(" > Atenção, problema de registro! Imóveis com valor R$" + imovel.getValor() +
+                " não são aceitos no programa.");
+        }
+        else {
             imoveis.add(imovel);
-
-
             // se "imovel" corresponder às regras, adicioná-lo à lista "imoveis" com o seguinte código:
             //    imoveis.add(imovel);
         }
+    }
 
 
         /**
@@ -49,16 +52,16 @@ public class ImoveisParaFinanciamento extends Imovel {
 
             // percorre a lista de imóveis
             for (Imovel imovel : imoveis) {
-
                 if (imovel.getValor() <= valorLimite) {
                     opcoes.add(imovel);
-                }
 
-                // se "imovel" corresponder às regras, adicioná-lo à lista de opcoes com o seguinte código:
-                //    opcoes.add(imovel);
+
+                    // se "imovel" corresponder às regras, adicioná-lo à lista de opcoes com o seguinte código:
+                    //    opcoes.add(imovel);
+                }
             }
 
             return opcoes;
         }
-    }
+
 }

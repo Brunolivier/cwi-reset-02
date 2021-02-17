@@ -3,7 +3,7 @@ Endereco: representa endereços genéricos.
 Deve ter o logradouro, número, complemento, bairro, cidade e estado (unidade federativa);
 */
 
-public class Endereco extends UnidadeFederativa {
+public class Endereco {
     private String logadouro;
     private double numero;
     private String complemento;
@@ -44,6 +44,11 @@ public class Endereco extends UnidadeFederativa {
     public UnidadeFederativa getEstado() {
         return estado;
     }
+
+
+
+
+
 
 
 }

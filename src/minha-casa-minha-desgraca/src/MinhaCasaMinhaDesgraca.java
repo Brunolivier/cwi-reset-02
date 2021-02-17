@@ -18,9 +18,20 @@ public class MinhaCasaMinhaDesgraca {
          *
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
-        opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Medicos", 805, "casa",
-                "Alipio de Melo"));
 
+
+        opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Medicos", 88, "casa",
+                "Alipio de Melo","Belo Horizonte", UnidadeFederativa.MINAS_GERAIS, 50000));
+        opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Advogados", 3, "casa",
+                "Castelo", "Contagem", UnidadeFederativa.MINAS_GERAIS, 500000));
+        opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Programadores", 505,
+                "apartamento", "Java", "Boolean", UnidadeFederativa.RIO_GRANDE_DO_SUL, 1000000));
+        opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Engenheiros", 90, "casa",
+                "Alipio de Melo","Belo Horizonte", UnidadeFederativa.MINAS_GERAIS, 600000));
+        opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Cientistas", 3000, "casa",
+                "Castelo", "Contagem", UnidadeFederativa.MINAS_GERAIS, 900000));
+        opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Mecanicos", 200,
+                "apartamento", "Java", "Boolean", UnidadeFederativa.RIO_GRANDE_DO_SUL, 2000000));
 
 
 
