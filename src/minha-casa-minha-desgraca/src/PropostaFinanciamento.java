@@ -67,20 +67,12 @@ public class PropostaFinanciamento {
     public String imprimirPropostaAprovada (){
         imprimirPropostaAprovada = "Beneficiário " + this.beneficiario.getNome() + ", imóvel " + this.imovel.getEndereco()
                 + ", meses para pagamento " + this.mesesParaPagamento + ". Parabéns, sua proposta foi aceita!";
-        //System.out.println(beneficiario);
-        //System.out.println(imovel);
-        //System.out.println(mesesParaPagamento);
-        //System.out.println("Parábens, sua proposta foi aceita!");
         return imprimirPropostaAprovada;
     }
 
     public String imprimirPropostaNegada(){
         imprimirPropostaNegada = "Beneficiário " + this.beneficiario.getNome() + " , imóvel " + this.imovel.getEndereco()
                 + " , meses para pagamento " + this.mesesParaPagamento + ". Deu ruim, sua proposta foi recusada!";
-        //System.out.println(beneficiario);
-        //System.out.println(imovel);
-        //System.out.println(mesesParaPagamento);
-        //System.out.println("Deu ruim, sua proposta foi recusada!");
         return imprimirPropostaNegada;
     }
 
@@ -108,11 +100,4 @@ public class PropostaFinanciamento {
         return imprimirPropostaNegada;
     }
 
-    public void setImprimirPropostaAprovada(String imprimirPropostaAprovada) {
-        this.imprimirPropostaAprovada = imprimirPropostaAprovada;
-    }
-
-    public void setImprimirPropostaNegada(String imprimirPropostaNegada) {
-        this.imprimirPropostaNegada = imprimirPropostaNegada;
-    }
 }
