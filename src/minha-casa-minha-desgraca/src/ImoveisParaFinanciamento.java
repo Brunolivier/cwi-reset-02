@@ -56,9 +56,11 @@ public class ImoveisParaFinanciamento {
                     opcoes.add(imovel);
 
 
+
                     // se "imovel" corresponder às regras, adicioná-lo à lista de opcoes com o seguinte código:
                     //    opcoes.add(imovel);
                 }
+
             }
 
             return opcoes;

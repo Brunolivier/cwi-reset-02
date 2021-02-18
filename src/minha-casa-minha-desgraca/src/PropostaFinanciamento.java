@@ -17,9 +17,13 @@ Obs.: os dois métodos de impressão não podem ser chamados fora da classe.
  */
 
 public class PropostaFinanciamento {
+    Endereco endereco;
     Beneficiario beneficiario;
     Imovel imovel;
     private int mesesParaPagamento;
+    private String imprimirPropostaAprovada;
+    private String imprimirPropostaNegada;
+
 
     public PropostaFinanciamento(Beneficiario beneficiario, Imovel imovel, int mesesParaPagamento) {
         this.beneficiario = beneficiario;
@@ -50,42 +54,54 @@ public class PropostaFinanciamento {
     }
 
     public String imprimirPropostaAprovada (){
-        System.out.println(beneficiario);
-        System.out.println(imovel);
-        System.out.println(mesesParaPagamento);
-        System.out.println("Parábens, sua proposta foi aceita!");
-        return imprimirPropostaAprovada();
+        imprimirPropostaAprovada = " " + this.beneficiario + " " + this.imovel + " " + this.mesesParaPagamento +
+        " " + "Parabéns, sua proposta foi aceita!";
+        //System.out.println(beneficiario);
+        //System.out.println(imovel);
+        //System.out.println(mesesParaPagamento);
+        //System.out.println("Parábens, sua proposta foi aceita!");
+        return imprimirPropostaAprovada;
     }
 
     public String imprimirPropostaNegada(){
-        System.out.println(beneficiario);
-        System.out.println(imovel);
-        System.out.println(mesesParaPagamento);
-        System.out.println("Deu ruim, sua proposta foi negada!");
-        return imprimirPropostaNegada();
+        imprimirPropostaNegada = " " + this.beneficiario + " " + this.imovel + " " + this.mesesParaPagamento +
+                " " + "Deu ruim, sua proposta foi recusada!";
+        //System.out.println(beneficiario);
+        //System.out.println(imovel);
+        //System.out.println(mesesParaPagamento);
+        //System.out.println("Deu ruim, sua proposta foi recusada!");
+        return imprimirPropostaNegada;
     }
 
     public Beneficiario getBeneficiario() {
         return beneficiario;
     }
 
-    public void setBeneficiario(Beneficiario beneficiario) {
-        this.beneficiario = beneficiario;
-    }
-
     public Imovel getImovel() {
         return imovel;
-    }
-
-    public void setImovel(Imovel imovel) {
-        this.imovel = imovel;
     }
 
     public int getMesesParaPagamento() {
         return mesesParaPagamento;
     }
 
-    public void setMesesParaPagamento(int mesesParaPagamento) {
-        this.mesesParaPagamento = mesesParaPagamento;
+    public Endereco getEndereco() {
+        return this.endereco;
+    }
+
+    public String getImprimirPropostaAprovada() {
+        return imprimirPropostaAprovada;
+    }
+
+    public String getImprimirPropostaNegada() {
+        return imprimirPropostaNegada;
+    }
+
+    public void setImprimirPropostaAprovada(String imprimirPropostaAprovada) {
+        this.imprimirPropostaAprovada = imprimirPropostaAprovada;
+    }
+
+    public void setImprimirPropostaNegada(String imprimirPropostaNegada) {
+        this.imprimirPropostaNegada = imprimirPropostaNegada;
     }
 }

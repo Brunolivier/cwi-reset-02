@@ -18,10 +18,19 @@ public class MinhaCasaMinhaDesgraca {
          *
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
+/*
+        Imovel imovel1 = new Imovel("rua dos Testes", 404, "casa", "Matrix", "Zion",
+                UnidadeFederativa.MINAS_GERAIS, 300000);
 
+        Beneficiario beneficiario1 = new Beneficiario("Bruno", 5000);
+
+        Endereco endereco1 = new Endereco("rua dos testes2", 777, "casa", "certo",
+                "Beaga", UnidadeFederativa.MINAS_GERAIS);
+
+        opcoesParaFinanciamento.registrarImovel(imovel1);
 
         opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Medicos", 88, "casa",
-                "Alipio de Melo","Belo Horizonte", UnidadeFederativa.MINAS_GERAIS, 50000));
+                "Alipio de Melo","Belo Horizonte", UnidadeFederativa.MINAS_GERAIS, 40000));
         opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Advogados", 3, "casa",
                 "Castelo", "Contagem", UnidadeFederativa.MINAS_GERAIS, 500000));
         opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Programadores", 505,
@@ -32,7 +41,12 @@ public class MinhaCasaMinhaDesgraca {
                 "Castelo", "Contagem", UnidadeFederativa.MINAS_GERAIS, 900000));
         opcoesParaFinanciamento.registrarImovel(new Imovel("rua dos Mecanicos", 200,
                 "apartamento", "Java", "Boolean", UnidadeFederativa.RIO_GRANDE_DO_SUL, 2000000));
-
+        */
+        Endereco endereco1 = new Endereco("rua para testar", 505, "casa", "Matrix",
+                "Beaga", UnidadeFederativa.MINAS_GERAIS);
+        Imovel imovel1 = new Imovel("rua do teste", 606, "ap","texas", "BH",
+                UnidadeFederativa.MINAS_GERAIS, endereco1,700000);
+        opcoesParaFinanciamento.registrarImovel(imovel1);
 
 
 
