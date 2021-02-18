@@ -28,6 +28,8 @@ public class Imovel extends Endereco{
         this.valor = valor;
     }
 
+    //    public Endereco getEndereco() {
+//        return endereco;
 
 
     public Endereco getEndereco() {

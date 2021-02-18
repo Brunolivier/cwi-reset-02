@@ -30,12 +30,13 @@ public class ImoveisParaFinanciamento {
      */
     public void registrarImovel(Imovel imovel) {
 
-        System.out.println("imovel registrado");
+
         if ((imovel.getValor() < 50000) || (imovel.getValor() > 1000000)) {
          System.out.println(" > Atenção, problema de registro! Imóveis com valor R$" + imovel.getValor() +
                 " não são aceitos no programa.");
         }
         else {
+            System.out.println("Imovel registrado " + imovel.getEndereco());
             imoveis.add(imovel);
             // se "imovel" corresponder às regras, adicioná-lo à lista "imoveis" com o seguinte código:
             //    imoveis.add(imovel);

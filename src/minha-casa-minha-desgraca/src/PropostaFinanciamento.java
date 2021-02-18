@@ -43,10 +43,21 @@ public class PropostaFinanciamento {
 
 
     public void validarProposta() {
-        if ((beneficiario.getSalario() * mesesParaPagamento) >= (imovel.getValor() / 2))
-        {
+        if ((imovel.getEstado() != UnidadeFederativa.SAO_PAULO) && (imovel.getEstado() != UnidadeFederativa.RIO_DE_JANEIRO)
+            && (beneficiario.getSalario() * mesesParaPagamento) >= (imovel.getValor() / 2)) {
             System.out.println(imprimirPropostaAprovada());
         }
+        else if (imovel.getEstado() == UnidadeFederativa.SAO_PAULO &&
+                (beneficiario.getSalario() * mesesParaPagamento) >= ((imovel.getValor() * 65) / 100)){
+
+            System.out.println(imprimirPropostaAprovada());
+        }
+         else if (imovel.getEstado() == UnidadeFederativa.RIO_DE_JANEIRO &&
+                (beneficiario.getSalario() * mesesParaPagamento) >= ((imovel.getValor() * 60) / 100)){
+
+            System.out.println(imprimirPropostaAprovada());
+        }
+
         else {
             System.out.println(imprimirPropostaNegada());
         }
