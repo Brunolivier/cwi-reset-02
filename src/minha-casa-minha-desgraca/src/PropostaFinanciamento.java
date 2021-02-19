@@ -43,20 +43,20 @@ public class PropostaFinanciamento {
 
 
     public void validarProposta() {
-        if ((imovel.getEstado() != UnidadeFederativa.SAO_PAULO) && (imovel.getEstado() != UnidadeFederativa.RIO_DE_JANEIRO)
-            && (beneficiario.getSalario() * mesesParaPagamento) >= (imovel.getValor() / 2)) {
+        // this.getEndereco().getEstado() != UnidadeFederativa.SAO_PAULO) && (this.getEndereco().getEstado() != UnidadeFederativa.RIO_DE_JANEIRO)
+        if ((beneficiario.getSalario() * mesesParaPagamento) >= (imovel.getValor() / 2)) {
             System.out.println(imprimirPropostaAprovada());
         }
-        else if (imovel.getEstado() == UnidadeFederativa.SAO_PAULO &&
-                (beneficiario.getSalario() * mesesParaPagamento) >= ((imovel.getValor() * 65) / 100)){
-
-            System.out.println(imprimirPropostaAprovada());
-        }
-         else if (imovel.getEstado() == UnidadeFederativa.RIO_DE_JANEIRO &&
-                (beneficiario.getSalario() * mesesParaPagamento) >= ((imovel.getValor() * 60) / 100)){
-
-            System.out.println(imprimirPropostaAprovada());
-        }
+        //else if (this.getEndereco().getEstado() == UnidadeFederativa.SAO_PAULO &&
+        //        (beneficiario.getSalario() * mesesParaPagamento) >= ((imovel.getValor() * 65) / 100)){
+        //
+        //    System.out.println(imprimirPropostaAprovada());
+        //}
+        //else if (this.getEndereco().getEstado() == UnidadeFederativa.RIO_DE_JANEIRO &&
+        //        (beneficiario.getSalario() * mesesParaPagamento) >= ((imovel.getValor() * 60) / 100)){
+        //
+        //    System.out.println(imprimirPropostaAprovada());
+        //}
 
         else {
             System.out.println(imprimirPropostaNegada());

@@ -7,20 +7,15 @@ informações do imóvel (ex.: "Imóvel localizado no endereço X. Valor: R$ Y")
 
 import java.sql.SQLOutput;
 
-public class Imovel extends Endereco {
+public abstract class Imovel{
     private String apresentacao;
     private Endereco endereco;
     private double valor;
 
-
-
-    public Imovel(String logadouro, double numero, String complemento, String bairro, String cidade, UnidadeFederativa estado,
-            Endereco endereco, double valor) {
-        super(logadouro, numero, complemento, bairro, cidade, estado);
+    public Imovel(Endereco endereco, double valor) {
         this.endereco = endereco;
         this.valor = valor;
     }
-
 
     public Endereco getEndereco() {
         return endereco;
@@ -35,7 +30,7 @@ public class Imovel extends Endereco {
     }
 
     public String apresentacao() {
-        apresentacao = "Imóvel localizado no endereço: " + this.endereco + "no valor de: " + this.valor;
+        apresentacao = "Imóvel localizado no endereço: " + this.getEndereco() + "no valor de: " + this.valor;
         return apresentacao;
 
     }

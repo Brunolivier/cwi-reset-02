@@ -32,8 +32,8 @@ public class ImoveisParaFinanciamento {
 
 
         if ((imovel.getValor() < 50000) || (imovel.getValor() > 1000000)) {
-         System.out.println(" > Atenção, problema de registro! Imóveis com valor R$" + imovel.getValor() +
-                " não são aceitos no programa.");
+         System.out.println(" > Atenção, problema de registro do imóvel: " + imovel.getEndereco() + ". Imóveis com valor R$"
+                 + imovel.getValor() + " não são aceitos no programa.");
         }
         else {
             System.out.println("Imovel registrado " + imovel.getEndereco());

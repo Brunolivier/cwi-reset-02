@@ -45,4 +45,27 @@ public class Endereco {
         return estado;
     }
 
+    public void setLogadouro(String logadouro) {
+        this.logadouro = logadouro;
+    }
+
+    public void setNumero(double numero) {
+        this.numero = numero;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public void setEstado(UnidadeFederativa estado) {
+        this.estado = estado;
+    }
 }

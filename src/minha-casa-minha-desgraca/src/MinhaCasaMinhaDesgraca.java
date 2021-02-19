@@ -19,6 +19,7 @@ public class MinhaCasaMinhaDesgraca {
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
 
+       /*
         Endereco endereco1 = new Endereco("rua para testar", 505, "casa", "Matrix",
                "Beaga", UnidadeFederativa.MINAS_GERAIS);
         Imovel imovel1 = new Imovel("rua para testar",505,"casa","Matrix","Beaga",
@@ -47,7 +48,19 @@ public class MinhaCasaMinhaDesgraca {
                 "Beaga", UnidadeFederativa.RIO_DE_JANEIRO);
         Imovel imovel5 = new Imovel("rua para testar",505,"casa","Matrix","Beaga",
                 UnidadeFederativa.MINAS_GERAIS, endereco5,1000000);
-        opcoesParaFinanciamento.registrarImovel(imovel5);
+        opcoesParaFinanciamento.registrarImovel(imovel5); */
+
+        Endereco endereco1 = new Endereco("rua um", 1, "sem", "um", "um",
+                UnidadeFederativa.MINAS_GERAIS);
+        Casa casa1 = new Casa(endereco1, 500000,"sim");
+        opcoesParaFinanciamento.registrarImovel(casa1);
+
+        Endereco endereco2 = new Endereco("rua dois", 2, "a", "dois", "dois",
+                UnidadeFederativa.MINAS_GERAIS);
+        Imovel apartamento2 = new Apartamento(endereco2,300000, "dois");
+        opcoesParaFinanciamento.registrarImovel(apartamento2);
+
+
 
 
         /**
