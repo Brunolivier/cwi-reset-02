@@ -32,11 +32,19 @@ public abstract class Imovel{
     }
 
     public String apresentacao() {
-        apresentacao = "Imovel " + getEndereco().getLogadouro() + getEndereco().getNumero() +getEndereco().getComplemento()
-                +getEndereco().getBairro() + getEndereco().getCidade() + getEndereco().getEstado() +
-                + getValor();
+
+        apresentacao = "Imovel do tipo " +
+                ", localizado no endereço: " + getEndereco().getLogadouro() +
+                ", número: " + getEndereco().getNumero() +
+                ", complemento: " + getEndereco().getComplemento() +
+                ", bairro: " + getEndereco().getBairro() +
+                ", cidade: " + getEndereco().getCidade() +
+                ", estado: " + getEndereco().getEstado() +
+                ", pelo valor de: " + getValor();
+
         return apresentacao;
     }
+
 
     public Casa getCasa() {
         return casa;

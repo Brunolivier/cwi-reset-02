@@ -30,7 +30,7 @@ public class MinhaCasaMinhaDesgraca {
 
         Endereco endereco3 = new Endereco("rua tres", 3, "c", "tres", "Tres",
                 UnidadeFederativa.MINAS_GERAIS);
-        Imovel casa3 = new Casa(endereco3, 40000, "nao");
+        Imovel casa3 = new Casa(endereco3, 40000, "não");
         opcoesParaFinanciamento.registrarImovel(casa3);
 
         Endereco endereco4 = new Endereco("rua quatro", 4, "d", "quatro", "Quatro",
@@ -47,10 +47,6 @@ public class MinhaCasaMinhaDesgraca {
                 UnidadeFederativa.RIO_DE_JANEIRO);
         Imovel apartamento6 = new Apartamento(endereco6, 1000000, "cobertura");
         opcoesParaFinanciamento.registrarImovel(apartamento6);
-
-
-
-
 
         /**
          * FIM

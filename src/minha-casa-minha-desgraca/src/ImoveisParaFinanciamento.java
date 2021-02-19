@@ -37,9 +37,10 @@ public class ImoveisParaFinanciamento {
         }
         else {
             imoveis.add(imovel);
-            System.out.println("Imovel registrado " + imovel.getEndereco().getLogadouro() + imovel.getEndereco().getNumero()
-                    + imovel.getEndereco().getComplemento() + imovel.getEndereco().getBairro()
-                    + imovel.getEndereco().getCidade() + imovel.getEndereco().getEstado() + imovel.getValor());
+            System.out.println("Imovel registrado " + imovel.apresentacao());
+                    //imovel.getEndereco().getLogadouro() + imovel.getEndereco().getNumero()
+                    //+ imovel.getEndereco().getComplemento() + imovel.getEndereco().getBairro()
+                    //+ imovel.getEndereco().getCidade() + imovel.getEndereco().getEstado() + imovel.getValor());
             // se "imovel" corresponder às regras, adicioná-lo à lista "imoveis" com o seguinte código:
             //    imoveis.add(imovel);
         }
