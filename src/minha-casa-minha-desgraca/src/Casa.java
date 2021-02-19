@@ -1,6 +1,7 @@
 public class Casa extends Imovel {
     private String patio;
 
+
     public Casa(Endereco endereco, double valor, String patio) {
         super(endereco, valor);
         this.patio = patio;
@@ -9,4 +10,6 @@ public class Casa extends Imovel {
     public String getPatio() {
         return patio;
     }
+
+
 }

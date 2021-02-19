@@ -11,54 +11,43 @@ public class MinhaCasaMinhaDesgraca {
 
         ImoveisParaFinanciamento opcoesParaFinanciamento = new ImoveisParaFinanciamento();
 
-
-
         /**
          * INÍCIO
          *
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
 
-       /*
-        Endereco endereco1 = new Endereco("rua para testar", 505, "casa", "Matrix",
-               "Beaga", UnidadeFederativa.MINAS_GERAIS);
-        Imovel imovel1 = new Imovel("rua para testar",505,"casa","Matrix","Beaga",
-                UnidadeFederativa.MINAS_GERAIS, endereco1,500000);
-        opcoesParaFinanciamento.registrarImovel(imovel1);
 
-        Endereco endereco2 = new Endereco("rua para testar", 505, "casa", "Matrix",
-                "Beaga", UnidadeFederativa.MINAS_GERAIS);
-        Imovel imovel2 = new Imovel("rua para testar",505,"casa","Matrix","Beaga",
-                UnidadeFederativa.MINAS_GERAIS, endereco2,40000);
-        opcoesParaFinanciamento.registrarImovel(imovel2);
-
-        Endereco endereco3 = new Endereco("rua para testar", 505, "casa", "Matrix",
-                "Beaga", UnidadeFederativa.MINAS_GERAIS);
-        Imovel imovel3 = new Imovel("rua para testar",505,"casa","Matrix","Beaga",
-                UnidadeFederativa.MINAS_GERAIS, endereco3,1200000);
-        opcoesParaFinanciamento.registrarImovel(imovel3);
-
-        Endereco endereco4 = new Endereco("rua para testar", 505, "casa", "Matrix",
-                "Beaga", UnidadeFederativa.SAO_PAULO);
-        Imovel imovel4 = new Imovel("rua para testar",505,"casa","Matrix","Beaga",
-                UnidadeFederativa.MINAS_GERAIS, endereco4,1000000);
-        opcoesParaFinanciamento.registrarImovel(imovel4);
-
-        Endereco endereco5 = new Endereco("rua para testar", 505, "casa", "Matrix",
-                "Beaga", UnidadeFederativa.RIO_DE_JANEIRO);
-        Imovel imovel5 = new Imovel("rua para testar",505,"casa","Matrix","Beaga",
-                UnidadeFederativa.MINAS_GERAIS, endereco5,1000000);
-        opcoesParaFinanciamento.registrarImovel(imovel5); */
-
-        Endereco endereco1 = new Endereco("rua um", 1, "sem", "um", "um",
+        Endereco endereco1 = new Endereco("rua um", 1, "a", "um", "um",
                 UnidadeFederativa.MINAS_GERAIS);
         Casa casa1 = new Casa(endereco1, 500000,"sim");
         opcoesParaFinanciamento.registrarImovel(casa1);
 
-        Endereco endereco2 = new Endereco("rua dois", 2, "a", "dois", "dois",
+        Endereco endereco2 = new Endereco("rua dois", 2, "b", "dois", "Dois",
                 UnidadeFederativa.MINAS_GERAIS);
         Imovel apartamento2 = new Apartamento(endereco2,300000, "dois");
         opcoesParaFinanciamento.registrarImovel(apartamento2);
+
+        Endereco endereco3 = new Endereco("rua tres", 3, "c", "tres", "Tres",
+                UnidadeFederativa.MINAS_GERAIS);
+        Imovel casa3 = new Casa(endereco3, 40000, "nao");
+        opcoesParaFinanciamento.registrarImovel(casa3);
+
+        Endereco endereco4 = new Endereco("rua quatro", 4, "d", "quatro", "Quatro",
+                UnidadeFederativa.MINAS_GERAIS);
+        Imovel apartamento4 = new Apartamento(endereco4, 2000000, "quatro");
+        opcoesParaFinanciamento.registrarImovel(apartamento4);
+
+        Endereco endereco5 = new Endereco("rua cinco", 5, "e", "cinco", "Cinco",
+                UnidadeFederativa.SAO_PAULO);
+        Imovel apartamento5 = new Apartamento(endereco5, 1000000, "cobertura");
+        opcoesParaFinanciamento.registrarImovel(apartamento5);
+
+        Endereco endereco6 = new Endereco("rua seis", 6, "f", "seis", "Seis",
+                UnidadeFederativa.RIO_DE_JANEIRO);
+        Imovel apartamento6 = new Apartamento(endereco6, 1000000, "cobertura");
+        opcoesParaFinanciamento.registrarImovel(apartamento6);
+
 
 
 

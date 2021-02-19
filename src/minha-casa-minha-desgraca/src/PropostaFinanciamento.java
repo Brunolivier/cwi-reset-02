@@ -17,7 +17,6 @@ Obs.: os dois métodos de impressão não podem ser chamados fora da classe.
  */
 
 public class PropostaFinanciamento {
-    Endereco endereco;
     Beneficiario beneficiario;
     Imovel imovel;
     private int mesesParaPagamento;
@@ -43,20 +42,19 @@ public class PropostaFinanciamento {
 
 
     public void validarProposta() {
-        // this.getEndereco().getEstado() != UnidadeFederativa.SAO_PAULO) && (this.getEndereco().getEstado() != UnidadeFederativa.RIO_DE_JANEIRO)
-        if ((beneficiario.getSalario() * mesesParaPagamento) >= (imovel.getValor() / 2)) {
+        if ((this.imovel.getEndereco().getEstado() != UnidadeFederativa.SAO_PAULO) &&
+                (this.imovel.getEndereco().getEstado() != UnidadeFederativa.RIO_DE_JANEIRO) &&
+                ((this.beneficiario.getSalario() * this.mesesParaPagamento) >= (this.imovel.getValor() / 2))) {
             System.out.println(imprimirPropostaAprovada());
         }
-        //else if (this.getEndereco().getEstado() == UnidadeFederativa.SAO_PAULO &&
-        //        (beneficiario.getSalario() * mesesParaPagamento) >= ((imovel.getValor() * 65) / 100)){
-        //
-        //    System.out.println(imprimirPropostaAprovada());
-        //}
-        //else if (this.getEndereco().getEstado() == UnidadeFederativa.RIO_DE_JANEIRO &&
-        //        (beneficiario.getSalario() * mesesParaPagamento) >= ((imovel.getValor() * 60) / 100)){
-        //
-        //    System.out.println(imprimirPropostaAprovada());
-        //}
+        else if ((this.imovel.getEndereco().getEstado() == UnidadeFederativa.SAO_PAULO) &&
+                ((beneficiario.getSalario() * this.mesesParaPagamento) >= ((this.imovel.getValor() * 65) / 100))) {
+                System.out.println(imprimirPropostaAprovada());
+        }
+        else if ((this.imovel.getEndereco().getEstado() == UnidadeFederativa.RIO_DE_JANEIRO) &&
+                ((this.beneficiario.getSalario() * this.mesesParaPagamento) >= ((this.imovel.getValor() * 60) / 100))) {
+                System.out.println(imprimirPropostaAprovada());
+        }
 
         else {
             System.out.println(imprimirPropostaNegada());
@@ -65,18 +63,18 @@ public class PropostaFinanciamento {
     }
 
     public String imprimirPropostaAprovada (){
-        imprimirPropostaAprovada = "Beneficiário " + this.beneficiario.getNome() + ", imóvel " + this.imovel.getEndereco()
+        imprimirPropostaAprovada = "Beneficiário " + this.beneficiario.getNome() + ", imóvel " + this.imovel.apresentacao()
                 + ", meses para pagamento " + this.mesesParaPagamento + ". Parabéns, sua proposta foi aceita!";
         return imprimirPropostaAprovada;
     }
 
     public String imprimirPropostaNegada(){
-        imprimirPropostaNegada = "Beneficiário " + this.beneficiario.getNome() + " , imóvel " + this.imovel.getEndereco()
+        imprimirPropostaNegada = "Beneficiário " + this.beneficiario.getNome() + " , imóvel " + this.imovel.apresentacao()
                 + " , meses para pagamento " + this.mesesParaPagamento + ". Deu ruim, sua proposta foi recusada!";
         return imprimirPropostaNegada;
     }
 
-    public Beneficiario getBeneficiario() {
+     public Beneficiario getBeneficiario() {
         return beneficiario;
     }
 
@@ -88,10 +86,6 @@ public class PropostaFinanciamento {
         return mesesParaPagamento;
     }
 
-    public Endereco getEndereco() {
-        return this.endereco;
-    }
-
     public String getImprimirPropostaAprovada() {
         return imprimirPropostaAprovada;
     }
@@ -99,5 +93,4 @@ public class PropostaFinanciamento {
     public String getImprimirPropostaNegada() {
         return imprimirPropostaNegada;
     }
-
 }

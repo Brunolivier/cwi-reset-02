@@ -21,6 +21,8 @@ public class Endereco {
         this.estado = estado;
     }
 
+
+
     public String getLogadouro() {
         return logadouro;
     }

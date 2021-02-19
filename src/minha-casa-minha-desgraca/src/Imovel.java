@@ -11,6 +11,8 @@ public abstract class Imovel{
     private String apresentacao;
     private Endereco endereco;
     private double valor;
+    Casa casa;
+    Apartamento apartamento;
 
     public Imovel(Endereco endereco, double valor) {
         this.endereco = endereco;
@@ -30,9 +32,19 @@ public abstract class Imovel{
     }
 
     public String apresentacao() {
-        apresentacao = "Imóvel localizado no endereço: " + this.getEndereco() + "no valor de: " + this.valor;
+        apresentacao = "Imovel " + getEndereco().getLogadouro() + getEndereco().getNumero() +getEndereco().getComplemento()
+                +getEndereco().getBairro() + getEndereco().getCidade() + getEndereco().getEstado() +
+                + getValor();
         return apresentacao;
-
     }
+
+    public Casa getCasa() {
+        return casa;
+    }
+
+    public Apartamento getApartamento() {
+        return apartamento;
+    }
+
 
 }

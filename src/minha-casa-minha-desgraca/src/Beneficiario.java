@@ -3,6 +3,8 @@
 public class Beneficiario {
     private String nome;
     private double salario;
+    Imovel imovel;
+
 
     public Beneficiario(String nome, double salario) {
         this.nome = nome;
@@ -25,7 +27,9 @@ public class Beneficiario {
         this.salario = salario;
     }
 
-
+    public Imovel getImovel() {
+        return imovel;
+    }
 }
 
 
