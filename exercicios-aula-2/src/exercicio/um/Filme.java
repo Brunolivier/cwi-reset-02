@@ -1,4 +1,11 @@
 package exercicio.um;
+
+import com.sun.javaws.IconUtil;
+
+import java.io.Console;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Filme {
     private Diretor diretor;
     private String nome;
@@ -8,13 +15,14 @@ public class Filme {
     private int nota;
 
 
-    public Filme(String nome, String descricao, double duracao, double ano, int nota, Diretor diretor) {
+    public Filme(Diretor diretor, String nome, String descricao, double duracao, double ano, int nota, ArrayList<String> elenco) {
+        this.diretor = diretor;
         this.nome = nome;
         this.descricao = descricao;
         this.duracao = duracao;
         this.ano = ano;
         this.nota = nota;
-        this.diretor = diretor;
+        this.elenco = elenco;
     }
 
     public void reproduzir() {
@@ -24,6 +32,36 @@ public class Filme {
         System.out.println("Nota: " + this.nota);
         System.out.println("Diretor: " + this.diretor.getNome());
     }
+
+    public String exibirCreditos (){
+        //TODO implementar comportamento de exibir informacoes
+    }
+
+    String elenco1 = "Bruno, Leticia, Laura, Andre";
+    String elenco2 = "Tasley, Diego, Isabella, Laiz";
+
+    ArrayList<String> elenco = new ArrayList<>();
+
+
+/*
+    for(String elenco : elenco){
+        elenco.add("Bruno");
+        elenco.add("Leticia");
+        elenco.add("Laura");
+        elenco.add("Andre");
+        elenco.add("Diego");
+        elenco.add("Laiz");
+        elenco.add("Tasley");
+        elenco.add("Isabella");
+        System.out.println("elenco: " + elenco);
+    }
+
+ */
+
+
+
+
+
 
     /*
     public void nota() {
