@@ -18,7 +18,7 @@ public class AplicacaoTeste {
 
         Editora editora1 = new Editora("DC Comics", "EUA");
         System.out.println("Editora: " +editora2.getNome());
-
+        
  */
 
         Diretor diretor = new Diretor("J.K",65,8, Genero.FEMININO);
