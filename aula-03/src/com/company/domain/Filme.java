@@ -11,7 +11,7 @@ public class Filme {
     private Integer avaliacao;
     private Diretor diretor;
 
-    public Filme(String nome, String descricao, Integer duracao, Integer anoLancamento, Integer avaliacao, Diretor diretor) {
+    public Filme(String nome, String descricao, Integer duracao, Integer anoLancamento, Integer avaliacao, Diretor diretor) throws IllegalAccessException {
         defineAvaliacao(avaliacao);
         validaNomeEDefineAvaliacao(nome);
         this.nome = nome;
@@ -28,9 +28,9 @@ public class Filme {
         System.out.println("Nome do Diretor: " + this.diretor.getNome());
     }
 
-    private void defineAvaliacao(Integer avaliacao) {
+    private void defineAvaliacao(Integer avaliacao) throws IllegalAccessException {
         if (avaliacao < 1 || avaliacao > 5) {
-            this.avaliacao = 3;
+            throw new IllegalAccessException("Avaliação inválida, favor avaliar em 5 porque é o máximo");
         } else {
             this.avaliacao = avaliacao;
         }
