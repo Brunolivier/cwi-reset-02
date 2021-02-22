@@ -1,7 +1,10 @@
 package domain.conta;
 
-public class ContaCorrente implements ContaBancaria {
+public class ContaDigital implements ContaBancaria{
     private Integer numeroDaConta;
+
+
+
 
 
 }
