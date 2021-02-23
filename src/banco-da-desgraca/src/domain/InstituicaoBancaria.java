@@ -6,7 +6,7 @@ public enum InstituicaoBancaria {
     BRADESCO,
     CAIXA,
     ITAU,
-    NUBANK
+    NUBANK;
 
 
 
@@ -15,7 +15,12 @@ Regras sobre instituições bancárias:
 Somente Itaú e Nubank permitem contas digitais;
 Somente Nubank não permite conta poupança.
 */
-    
+
+    private String regrasInstituicoesBancarias (){
+        //TODO criar metodo das regras
+    }
+
+
 
 
 

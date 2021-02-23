@@ -14,4 +14,9 @@ solicitado for de pelo menos R$ 10,00;
 
  */
 
+
+    private void taxaSaque (){
+        //TODO implementar metodo do valor minimo do saque e verificar qual retorno será
+    }
+
 }

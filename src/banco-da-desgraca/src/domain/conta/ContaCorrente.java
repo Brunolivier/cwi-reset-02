@@ -1,6 +1,7 @@
 package domain.conta;
 
 
+
 public class ContaCorrente implements ContaBancaria {
     private Integer numeroDaConta;
     br.com.banco.desgraca.domain.InstituicaoBancaria instituicaoBancaria;
@@ -15,5 +16,14 @@ public class ContaCorrente implements ContaBancaria {
     (ou seja, notas de R$ 5,00, R$ 10,00, R$ 20,00, R$ 50,00, R$ 100,00 e R$ 200,00);
 
 */
+
+    private void taxaTransferencia (){
+        //TODO implementar metodo da taxa de transferencia e verificar qual retorno será
+    }
+
+    private void taxaSaque (){
+        //TODO implementar taxa de saque e verificar qual retorno será
+    }
+
 
 }
