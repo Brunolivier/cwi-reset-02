@@ -7,4 +7,17 @@ public enum InstituicaoBancaria {
     CAIXA,
     ITAU,
     NUBANK
+
+
+
+/*
+Regras sobre instituições bancárias:
+Somente Itaú e Nubank permitem contas digitais;
+Somente Nubank não permite conta poupança.
+*/
+    
+
+
+
 }
+
