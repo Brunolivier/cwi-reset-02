@@ -3,18 +3,18 @@ package br.com.banco.desgraca.domain;
 import java.time.format.DateTimeFormatter;
 
 public class Transacao {
-    private void tipoDaTransacao;
+    private Enum tipoDaTransacao;
     private DateTimeFormatter dataDaTransacao;
     private double valorDaTransacao;
 
 
-    public Transacao(void tipoDaTransacao, DateTimeFormatter dataDaTransacao, Integer valorDaTransacao) {
+    public Transacao(Enum tipoDaTransacao, DateTimeFormatter dataDaTransacao, double valorDaTransacao) {
         this.tipoDaTransacao = tipoDaTransacao;
         this.dataDaTransacao = dataDaTransacao;
         this.valorDaTransacao = valorDaTransacao;
     }
 
-    
+
 
 
 

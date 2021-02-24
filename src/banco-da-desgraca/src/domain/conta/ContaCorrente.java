@@ -1,7 +1,7 @@
 package domain.conta;
 
 
-
+import br.com.banco.desgraca.domain.InstituicaoBancaria;
 
 public class ContaCorrente implements ContaBancaria {
     private Integer numeroDaConta;
@@ -9,6 +9,7 @@ public class ContaCorrente implements ContaBancaria {
 
 
 /*
+
     Regras específicas dos tipos de contas bancárias:
 
     ContaCorrente: é livre de taxas, exceto para transferências para outras instituições bancárias
@@ -18,6 +19,19 @@ public class ContaCorrente implements ContaBancaria {
 
 */
 
+    public ContaCorrente(Integer numeroDaConta, InstituicaoBancaria instituicaoBancaria) {
+        this.numeroDaConta = numeroDaConta;
+        this.instituicaoBancaria = instituicaoBancaria;
+    }
+
+    public Integer getNumeroDaConta() {
+        return numeroDaConta;
+    }
+
+    @Override
+    public InstituicaoBancaria getInstituicaoBancaria() {
+        return instituicaoBancaria;
+    }
 
     private void taxaTransferencia (){
         //TODO implementar metodo da taxa de transferencia e verificar qual retorno será
