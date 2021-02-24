@@ -3,7 +3,7 @@ package domain.conta;
 import br.com.banco.desgraca.domain.InstituicaoBancaria;
 
 public class ContaPoupanca implements ContaBancaria{
-    private Integer numeroDaConta;
+    private int numeroDaConta;
     br.com.banco.desgraca.domain.InstituicaoBancaria instituicaoBancaria;
 
 
@@ -14,7 +14,7 @@ ContaPoupanca: possui taxa de 2% para saques, sendo que o valor mínimo para sol
 Possui taxa de 0,5% para transferências para mesma instituição bancária e 1% para outras instituições bancárias;
 */
 
-    public ContaPoupanca(Integer numeroDaConta, InstituicaoBancaria instituicaoBancaria) {
+    public ContaPoupanca(int numeroDaConta, InstituicaoBancaria instituicaoBancaria) {
         this.numeroDaConta = numeroDaConta;
         this.instituicaoBancaria = instituicaoBancaria;
     }

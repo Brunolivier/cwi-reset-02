@@ -15,7 +15,15 @@ public class Transacao {
     }
 
 
+    public Enum getTipoDaTransacao() {
+        return tipoDaTransacao;
+    }
 
+    public DateTimeFormatter getDataDaTransacao() {
+        return dataDaTransacao;
+    }
 
-
+    public double getValorDaTransacao() {
+        return valorDaTransacao;
+    }
 }

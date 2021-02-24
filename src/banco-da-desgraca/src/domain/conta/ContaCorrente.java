@@ -4,7 +4,7 @@ package domain.conta;
 import br.com.banco.desgraca.domain.InstituicaoBancaria;
 
 public class ContaCorrente implements ContaBancaria {
-    private Integer numeroDaConta;
+    private int numeroDaConta;
     br.com.banco.desgraca.domain.InstituicaoBancaria instituicaoBancaria;
 
 
@@ -19,7 +19,7 @@ public class ContaCorrente implements ContaBancaria {
 
 */
 
-    public ContaCorrente(Integer numeroDaConta, InstituicaoBancaria instituicaoBancaria) {
+    public ContaCorrente(int numeroDaConta, InstituicaoBancaria instituicaoBancaria) {
         this.numeroDaConta = numeroDaConta;
         this.instituicaoBancaria = instituicaoBancaria;
     }

@@ -10,4 +10,32 @@ public enum TipoTransacao {
     TipoTransacao() {
     }
 
+    public void consultarSaldo (){
+
+    }
+
+    public void depositar (){
+
+    }
+
+    public void sacar (){
+
+    }
+
+    public void transferir (){
+
+    }
+
+    public void exibirExtrato (){
+
+    }
+
+
+
+
+
+
+
+
+
 }
