@@ -1,7 +1,7 @@
 package domain.conta;
 
 public class ContaDigital implements ContaBancaria{
-    private Integer numeroDaConta;
+    private int numeroDaConta;
     br.com.banco.desgraca.domain.InstituicaoBancaria instituicaoBancaria;
 
 

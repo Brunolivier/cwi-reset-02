@@ -16,9 +16,12 @@ Somente Itaú e Nubank permitem contas digitais;
 Somente Nubank não permite conta poupança.
 */
 
+
+
     private String regrasInstituicoesBancarias (){
         //TODO criar metodo das regras
     }
+
 
 
 
