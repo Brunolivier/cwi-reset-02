@@ -1,5 +1,7 @@
 package br.com.banco.desgraca.domain;
 
+import java.sql.SQLOutput;
+
 public enum InstituicaoBancaria {
 
     BANCO_DO_BRASIL,
@@ -20,20 +22,22 @@ Somente Nubank não permite conta poupança.
     }
 
 
-    private String regrasInstituicoesBancarias (){
+    private void regrasInstituicoesBancarias (){
         //TODO criar metodo das regras
     }
 
     public void contasDigitais (){
         if (contasDigitais() == NUBANK){
-            System.out.println("");
+            System.out.println("Conta digital criada com sucesso");
 
         }
         else if (contasDigitais() == ITAU){
-            System.out.println();
+            System.out.println("Conta digital criada com sucesso");
         }
         else {
             //TODO Retornar um erro pois somente o itau e nubank permite conta digital
+
+
         }
     }
 
@@ -42,12 +46,9 @@ Somente Nubank não permite conta poupança.
             //TODO Retonar um erro pois somente o nubank nao permite conta poupanca
         }
         else {
-            System.out.println();
+            System.out.println("Conta poupança criada com sucesso");
         }
     }
-
-
-
 
 
 

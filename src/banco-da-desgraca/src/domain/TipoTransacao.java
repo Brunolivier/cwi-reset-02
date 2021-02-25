@@ -10,31 +10,33 @@ public enum TipoTransacao {
     TipoTransacao() {
     }
 
-    public void consultarSaldo (){
+    public String consultarSaldo (){
 
     }
 
-    public void depositar (){
+    public double depositar (){
 
     }
 
-    public void sacar (){
+    public double sacar (){
+
 
     }
 
-    public void transferir (){
+    public double transferir (){
 
     }
 
-    public void exibirExtrato (){
+    public String exibirExtrato (){
 
     }
 
 
 
-
-
-
+    @Override
+    public String toString() {
+        return "TipoTransacao{}";
+    }
 
 
 

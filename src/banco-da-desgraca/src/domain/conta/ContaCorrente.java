@@ -1,12 +1,12 @@
 package domain.conta;
-
-
 import br.com.banco.desgraca.domain.InstituicaoBancaria;
+
+import java.time.LocalDate;
 
 public class ContaCorrente implements ContaBancaria {
     private int numeroDaConta;
-    br.com.banco.desgraca.domain.InstituicaoBancaria instituicaoBancaria;
-
+    private InstituicaoBancaria instituicaoBancaria;
+    private double saldo;
 
 /*
 
@@ -19,12 +19,13 @@ public class ContaCorrente implements ContaBancaria {
 
 */
 
-    public ContaCorrente(int numeroDaConta, InstituicaoBancaria instituicaoBancaria) {
+    public ContaCorrente(int numeroDaConta, InstituicaoBancaria instituicaoBancaria, double saldo) {
         this.numeroDaConta = numeroDaConta;
         this.instituicaoBancaria = instituicaoBancaria;
+        this.saldo = saldo;
     }
 
-    public Integer getNumeroDaConta() {
+    public int getNumeroDaConta() {
         return numeroDaConta;
     }
 
@@ -33,13 +34,42 @@ public class ContaCorrente implements ContaBancaria {
         return instituicaoBancaria;
     }
 
-    private void taxaTransferencia (){
-        //TODO implementar metodo da taxa de transferencia e verificar qual retorno será
+    @Override
+    public Double consultarSaldo() {
+        System.out.println("Seu saldo é de");
+        return saldo;
+
     }
 
-    private void taxaSaque (){
-        //TODO implementar taxa de saque e verificar qual retorno será
+    @Override
+    public void depositar(Double valor) {
+        saldo += valor;
+        System.out.println("Valor " + valor + " depositado com sucesso");
+        System.out.println("Novo saldo: " + saldo);
+
     }
+
+    @Override
+    public void sacar(Double valor) {
+
+    }
+
+    @Override
+    public void transferir(Double valor, ContaBancaria contaDestino) {
+
+    }
+
+    @Override
+    public void exibirExtrato(LocalDate inicio, LocalDate fim) {
+
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
 
 
 }
+
+

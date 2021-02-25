@@ -26,4 +26,18 @@ public class Transacao {
     public double getValorDaTransacao() {
         return valorDaTransacao;
     }
+
+
+
+    public void setTipoDaTransacao(Enum tipoDaTransacao) {
+        this.tipoDaTransacao = tipoDaTransacao;
+    }
+
+    public void setDataDaTransacao(DateTimeFormatter dataDaTransacao) {
+        this.dataDaTransacao = dataDaTransacao;
+    }
+
+    public void setValorDaTransacao(double valorDaTransacao) {
+        this.valorDaTransacao = valorDaTransacao;
+    }
 }
