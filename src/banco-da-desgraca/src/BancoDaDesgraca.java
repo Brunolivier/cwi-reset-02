@@ -1,6 +1,4 @@
-package br.com.banco.desgraca;
-
-import br.com.banco.desgraca.domain.InstituicaoBancaria;
+import domain.InstituicaoBancaria;
 import domain.conta.ContaBancaria;
 import domain.conta.ContaDigital;
 

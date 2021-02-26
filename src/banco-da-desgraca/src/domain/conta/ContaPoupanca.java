@@ -1,7 +1,5 @@
 package domain.conta;
-
-import br.com.banco.desgraca.domain.InstituicaoBancaria;
-
+import domain.InstituicaoBancaria;
 import java.time.LocalDate;
 
 
@@ -66,14 +64,14 @@ Possui taxa de 0,5% para transferências para mesma instituição bancária e 1%
     public void transferir(Double valor, ContaBancaria contaDestino) {
         // CRIAR UMA VARIAVEL/METODO PARA TAXA E CHECAGEM DA INSTITUICAO - DEIXAR MELHOR LEGIVEL
         if ((valor + (valor * 0.05) <= saldo) && (getInstituicaoBancaria().equals(contaDestino.getInstituicaoBancaria()))) {
-            saldo = saldo - valor + (valor * 0.05);
+            saldo = saldo - (valor + (valor * 0.05));
             contaDestino.depositar(valor); // VERIFICAR O RECEBIMENTO DO VALOR NA CONTA DESTINO
             System.out.println("Valor " + valor + "transferido com sucesso");
             System.out.println("Novo saldo: " + saldo);
         }
 
         else if ((valor + (valor * 0.1) <= saldo) && (getInstituicaoBancaria() != contaDestino.getInstituicaoBancaria())) {
-            saldo = saldo - valor + (valor * 0.05);
+            saldo = saldo - (valor + (valor * 0.1));
             contaDestino.depositar(valor); // VERIFICAR O RECEBIMENTO DO VALOR NA CONTA DESTINO
             System.out.println("Valor " + valor + "transferido com sucesso");
             System.out.println("Novo saldo: " + saldo);
@@ -95,7 +93,19 @@ Possui taxa de 0,5% para transferências para mesma instituição bancária e 1%
             return saldo;
         }
 
-
+    public void setNumeroDaConta(int numeroDaConta) {
+        this.numeroDaConta = numeroDaConta;
     }
 
+    public void setInstituicaoBancaria(InstituicaoBancaria instituicaoBancaria) {
+        this.instituicaoBancaria = instituicaoBancaria;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+
 }
+
+

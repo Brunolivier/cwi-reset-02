@@ -1,6 +1,8 @@
 package domain.conta;
 
-import br.com.banco.desgraca.domain.InstituicaoBancaria;
+
+
+import domain.InstituicaoBancaria;
 
 import java.time.LocalDate;
 
@@ -28,6 +30,7 @@ solicitado for de pelo menos R$ 10,00;
     public int getNumeroDaConta() {
         return numeroDaConta;
     }
+
 
     @Override
     public InstituicaoBancaria getInstituicaoBancaria() {

@@ -1,5 +1,7 @@
 package domain.conta;
-import br.com.banco.desgraca.domain.InstituicaoBancaria;
+
+
+import domain.InstituicaoBancaria;
 
 import java.time.LocalDate;
 
@@ -51,11 +53,38 @@ public class ContaCorrente implements ContaBancaria {
 
     @Override
     public void sacar(Double valor) {
+        if ((valor <= saldo) && (valor % 5 == 0)){
+            saldo -= valor;
+            System.out.println("Saque realizado no importe de: " + valor);
+            saldo = saldo - valor;
+            System.out.println("Novo saldo: " + saldo);
+
+        }
+        else {
+            //TODO Implementar erro
+            System.out.println("Operação não realizada");
+        }
 
     }
 
     @Override
     public void transferir(Double valor, ContaBancaria contaDestino) {
+        if ((instituicaoBancaria.equals(contaDestino.getInstituicaoBancaria())) && (valor <= saldo)){
+            saldo = saldo - valor;
+            contaDestino.depositar(valor); // VERIFICAR O RECEBIMENTO DO VALOR NA CONTA DESTINO
+            System.out.println("Valor " + valor + "transferido com sucesso");
+            System.out.println("Novo saldo: " + saldo);
+        }
+        else if ((valor + (valor * 0.1) <= saldo) && (getInstituicaoBancaria() != contaDestino.getInstituicaoBancaria())) {
+            saldo = saldo - (valor + (valor * 0.1));
+            contaDestino.depositar(valor); // VERIFICAR O RECEBIMENTO DO VALOR NA CONTA DESTINO
+            System.out.println("Valor " + valor + "transferido com sucesso");
+            System.out.println("Novo saldo: " + saldo);
+        }
+        else{
+            //TODO implementar erro
+            System.out.println("Transferência não realizada");
+        }
 
     }
 

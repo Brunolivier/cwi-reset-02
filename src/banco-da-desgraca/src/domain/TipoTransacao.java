@@ -1,4 +1,4 @@
-package br.com.banco.desgraca.domain;
+package domain;
 
 public enum TipoTransacao {
     CONSULTARSALDO,

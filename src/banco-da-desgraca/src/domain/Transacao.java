@@ -1,4 +1,4 @@
-package br.com.banco.desgraca.domain;
+package domain;
 
 import java.time.format.DateTimeFormatter;
 
@@ -26,7 +26,6 @@ public class Transacao {
     public double getValorDaTransacao() {
         return valorDaTransacao;
     }
-
 
 
     public void setTipoDaTransacao(Enum tipoDaTransacao) {
