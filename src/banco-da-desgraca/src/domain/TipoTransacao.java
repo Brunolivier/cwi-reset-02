@@ -1,5 +1,14 @@
 package domain;
 
+
+
+
+// REFAZER TUDO!!!!
+
+
+
+
+
 public enum TipoTransacao {
     CONSULTARSALDO,
     DEPOSITAR,

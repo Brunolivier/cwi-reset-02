@@ -2,6 +2,15 @@ package domain;
 
 import java.time.format.DateTimeFormatter;
 
+
+
+
+
+// REFAZER TUDO!!!!
+
+
+
+
 public class Transacao {
     private Enum tipoDaTransacao;
     private DateTimeFormatter dataDaTransacao;

@@ -1,6 +1,6 @@
 package domain.conta;
-import domain.InstituicaoBancaria;
 
+import br.com.banco.desgraca.domain;
 
 import java.time.LocalDate;
 
